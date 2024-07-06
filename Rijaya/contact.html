@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rijaya Comercial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/Rijaja.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="">Acerca de</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="account.html">Cuenta</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <h1>Contáctenos</h1>
+        <p>Contáctenos sobre cualquier cosa relacionada con nuestra empresa o servicios. Haremos todo lo posible
+            por
+            responderle a la brevedad.</p>
+        <div class="contact-container">
+            <form action="submit_contact.php" method="post">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="phone">Número de teléfono:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="company">Empresa:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div>
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Pregunta:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+                    <a href="" class="btn">Enviar
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </form>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60342.373090967325!2d-98.105246!3d19.046217!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfeaf1d49e3e8f%3A0x62375ba6d0a43b7!2sRijaya!5e0!3m2!1ses-419!2smx!4v1720222945487!5m2!1ses-419!2smx"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div class="map-container-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6423283367026!2d-98.20691432391021!3d19.035476182160686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0c3fcf87b53%3A0xd395e51cd3632efc!2sRijaya%20Comercial%20S.A.%20de%20C.V.!5e0!3m2!1ses-419!2smx!4v1720295341160!5m2!1ses-419!2smx"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <!----------Footer--------------->
+
+    <div class="footer-section social-icons">
+        <h3>Síguenos</h3>
+        <a href="https://wa.me/2223890374" target="_blank"><img src="images/Whats.gif"></a>
+        <a href="https://www.instagram.com/rijayamx?igsh=MTM4ZDB3d2xzajB1aA==" target="_blank"><img
+                src="images/Insta.gif"></a>
+        <a href="https://www.facebook.com/rijayacomercial" target="_blank"><img src="images/Face.gif"></a>
+
+
+        <div class="footer-section address">
+            <p>Carr. Fed. Puebla - Tehuacán Km 10.5 • Col. Chachapa, Puebla. C.P. 72980 • Amozoc, Puebla.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="images/Timb.gif"><span>222 286 2952</span>
+                </div>
+                <div class="contact-item">
+                    <img src="images/Corre.gif"><span>soporte@rijayacomercial.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section logo">
+            <img src="images/Rijaja.png" width="105px" height="65px">
+        </div>
+
+        <div class="footer-section copyright">
+            <p>Copyright © | Rijaya Comercial</p>
+        </div>
+    </div>
+
+    <!-------------js for toggle menu-------------->
+
+    <script>
+
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+
+</html>
